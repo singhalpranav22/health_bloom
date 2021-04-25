@@ -130,6 +130,8 @@ class _SignInPageState extends State<SignInPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+
+              Image.asset("assets/health_bloom.png"),
               SizedBox(height: 50),
               OutlineButton(
                 splashColor: Colors.grey,
@@ -152,7 +154,8 @@ class _SignInPageState extends State<SignInPage> {
                           'Sign in with Google',
                           style: TextStyle(
                             fontSize: 20,
-                            color: Colors.grey,
+                            color: Colors.blueAccent,
+                            fontWeight: FontWeight.bold
                           ),
                         ),
                       )
@@ -214,8 +217,10 @@ class _MainPageState extends State<MainPage> {
       ),
       child: ListView(
         children: <Widget>[
+          
+          Image.asset("assets/imgg.png"),
           SizedBox(
-            height: 200,
+            height: 50,
 
           ),
 
