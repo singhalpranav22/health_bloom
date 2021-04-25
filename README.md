@@ -1,3 +1,8 @@
+## Try it Out
+[APK](https://drive.google.com/file/d/11tpSoOR4levWyGcS58TdF5RAXA1VtFl0/view)
+___
+[Demo Video](https://youtu.be/WCnNG0UWNxc)
+
 ## Inspiration
 Right from the beginning, we & our doctors have faced a great issue of tracking our medical history. We have stockpiled a lot of medical records, prescriptions, and medical test reports in our cupboard for a long time. So whenever we used to go to a doctor, he was not able to follow up our treatment as he was not aware of our past records. So we thought , why not create a single point of access for both doctors as well as patients in the form of an app such that all the records of the patient are accessible to the doctor so that he can follow up our case more efficiently. We were also aware of the fact that a large number of fitness tracking apps are there in the market. So we thought of making making our own fitness tracker which will not only predict the right things we should do as per the goal set by us, but feed our doctors about our fitness regime. To make this app accessible to all, we also had an aim to develop something for those who are not able to see properly. For them we proposed to scan the prescription through camera, extract useful information out of it and to read it aloud to them so that they can be well aware about their prescription. Also, we wanted to make a reminder system for medicines based on the prescription image we uploaded.
 
