@@ -13,29 +13,35 @@ class _ProfileuserState extends State<Profileuser> {
   int desiredmass=50;
   int Tcalories=0;
   int total=0;
-  int day=27;
+  int day=0;
+  int temp;
   User user;
   CollectionReference userRef;
   Widget dayy=Text('Day :-');
   progressCal(){
-    int temp=(desiredmass-startmass)*7720;
+    temp=(desiredmass-startmass)*7720;
     temp=temp+Tcalories;
     if(temp<0){
       temp=temp*(-1);
     }
     day=27;
-    while(temp<0){
+    print(temp);
+    while(temp>0){
       day++;
-      temp=temp-200;
+      temp=temp-600;
     }
     setState(() {
       dayy=Text('Day :-'+day.toString());
     });
+    // print(Tcalories);
     print(temp);
-    print(Tcalories);
-    print(startmass);
-    print(desiredmass);
-    print(day);
+    temp++;
+    print(temp);
+    temp++;
+    print(temp);
+    // print(startmass);
+    // print(desiredmass);
+    // print(day);
   }
 
   getUser(){
@@ -86,7 +92,9 @@ class _ProfileuserState extends State<Profileuser> {
       body: Container(
         child:Column(
           children: [
-            Expanded(child: Row(
+            Expanded(
+                flex: 2,
+                child: Row(
               children: [
                 Expanded(child: Container(
                   margin: EdgeInsets.all(20),
@@ -133,7 +141,8 @@ class _ProfileuserState extends State<Profileuser> {
                     ],
                   ),
                 )),
-                Expanded(child: Container(
+                Expanded(
+                    child: Container(
                   margin: EdgeInsets.all(20),
                   padding: EdgeInsets.all(10),
                   decoration: boxdeco(),
@@ -181,7 +190,9 @@ class _ProfileuserState extends State<Profileuser> {
               ],
             )
             ),
-            Expanded(child: Container(
+            Expanded(
+                flex: 2,
+                child: Container(
               margin: EdgeInsets.all(20),
               padding: EdgeInsets.all(10),
               decoration: boxdeco(),
@@ -193,31 +204,48 @@ class _ProfileuserState extends State<Profileuser> {
                 ],
               )
             )),
-            Expanded(child: Row(
+            Expanded(
+                flex: 2,child: Container(
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(10),
+              decoration: boxdeco(),
+              child: Column(
+                children: [
+                  Divider(),
+                  Text('Your Growth is increasing'),
+                  Divider(),
+                ],
+              ),
+            )),
+            Expanded(flex: 2,child: Column(
               children: [
-                Expanded(child: Container(
+                Container(
                   margin: EdgeInsets.all(20),
                   padding: EdgeInsets.all(10),
                   decoration: boxdeco(),
-                  child: Text('increasing'),
-                )),
-                Expanded(child: Container(
-                  margin: EdgeInsets.all(20),
-                  padding: EdgeInsets.all(10),
-                  decoration: boxdeco(),
-                  child: Text('increasing'),
-                )),
+                  child: Column(
+                    children: [
+                      Divider(),
+                      Text('You are Doing well keep it up!'),
+                      Divider(),
+                    ],
+                  ),
+                ),
               ],
-            )
-            ),
+            )),
             Expanded(child: GestureDetector(
               onTap: getData,
-              child: Container(
-                margin: EdgeInsets.all(20),
-                padding: EdgeInsets.all(10),
-                decoration: boxdeco(),
-                child: Text('REFRESH'),
-                // child: Text('your progress is goood'),
+              child: Center(
+                child: Container(
+                  margin: EdgeInsets.all(20),
+                  padding: EdgeInsets.all(10),
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20.0),
+                    color: Colors.blue,
+                  ),
+                  child: Text('REFRESH'),
+                  // child: Text('your progress is goood'),
+                ),
               ),
             )),
 

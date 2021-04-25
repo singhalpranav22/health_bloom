@@ -32,6 +32,7 @@ class _RHomeState extends State<RHome> {
         .get();
     // if (!documentSnapshot.exists) {
       users.doc(user.uid).collection('daily').doc().set({
+        "date":DateTime.now(),
         "walk":walk,
         "calories":calories,
         "sleep": sleep,
@@ -57,6 +58,9 @@ class _RHomeState extends State<RHome> {
     });
   }
   setData()async{
+    await userRef.doc(user.uid).set({
+      "Tcs":0,
+    });
     await userRef.doc(user.uid).update({
       "Tcalories":Tcalories,
     });
@@ -157,7 +161,7 @@ class _RHomeState extends State<RHome> {
                             GestureDetector(
                                 onTap: (){
                                   setState(() {
-                                    cintake=cintake+100;
+                                    cintake=cintake-100;
                                   });
                                 },
                                 child: Container(
@@ -448,7 +452,7 @@ class _RHomeState extends State<RHome> {
         backgroundColor: MyColor.secondary,
         onPressed: (){
           addDailyHealthRecord();
-          Tcalories=cintake-sleep*46+calories;
+          Tcalories=cintake-sleep*46-calories+Tcalories;
           setData();
         },
         child: Icon(
