@@ -6,13 +6,13 @@ class RequestView extends StatelessWidget {
       appBar: AppBar(
         title: Text("Visit Details",
           style: TextStyle(
-            color: Colors.black,
+            color: Colors.white,
           ),
         ),
-        backgroundColor: Color(0xff9ad7e9),
+        backgroundColor: Colors.deepOrange,
       ),
       body: Container(
-        color:  Color(0xff9ad7e9),
+//        color:  Color(0xff9ad7e9),
         child: Column(
           children: <Widget>[
 //            Padding(
