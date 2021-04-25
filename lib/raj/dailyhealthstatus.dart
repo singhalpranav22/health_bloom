@@ -49,6 +49,15 @@ class _HealthdailyStatusState extends State<HealthdailyStatus> {
                       ),
                       child: Column(
                         children: [
+                          Text(document['date'].toDate().day.toString()+'-'+document['date'].toDate().month.toString()+'-'+document['date'].toDate().year.toString()
+
+                            +'      '+document['date'].toDate().hour.toString()+' : '+document['date'].toDate().minute.toString()+' : '+document['date'].toDate().second.toString()
+
+                          ,style: TextStyle(
+                              fontWeight: FontWeight.w900,
+                              color: Colors.deepOrange
+                            ),
+                          ),
                           Text('Calories -> '+document['calories'].toString()),
                           Text('Calories Intake-> '+document['cintake'].toString()),
                           Text('Sleep Hour -> '+document['sleep'].toString()),
