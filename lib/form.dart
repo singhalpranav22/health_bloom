@@ -187,16 +187,22 @@ class _PrescriptionState extends State<Prescription> {
 //                      Navigator.pop(context);
                       getFileAndUpload();
 //                      }
-                    }
+                    },
+                  style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.blue[300]),
+//          padding: MaterialStateProperty.all(EdgeInsets.all(50)),
+//          textStyle: MaterialStateProperty.all(TextStyle(fontSize: 30))
+                  ),
 
                 ),
 
                 SizedBox(height: 20.0),
 
                 ElevatedButton(
-//                    color: Colors.pink[400],
-                    child: Text("Add"),
+                  child: Text("Add"),
+
                     onPressed: (){
+
                       print(drname);
                       print(description);
                       print(medicines);
@@ -204,9 +210,17 @@ class _PrescriptionState extends State<Prescription> {
                       DatabaseService(uid: user.uid).adddata(doctor: drname,description: description,medicines: medicines,url: url,prescText: presctext,date: userSubmissionTime);
                       Navigator.pop(context);
 //                      }
-                    }
+                    },
+                    style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue[300]),
+//          padding: MaterialStateProperty.all(EdgeInsets.all(50)),
+//          textStyle: MaterialStateProperty.all(TextStyle(fontSize: 30))
+                    ),
+    ),
 
-                ),
+
+
+
                 SizedBox(height: 20.0),
                 Text(error,
                   style: TextStyle(

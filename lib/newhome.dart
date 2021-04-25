@@ -14,12 +14,12 @@ class _NewHomeState extends State<NewHome> {
       length: 3,
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Color(0xff9ad7e9),
+          backgroundColor: Colors.deepOrange,
 //        backgroundColor: Colors.transparent,
           title: Text(
             "Medical Zone",
             style: TextStyle(
-              color: Colors.black,
+              color: Colors.white,
             ),
           ),
 
@@ -34,7 +34,7 @@ class _NewHomeState extends State<NewHome> {
                   alignment: Alignment.center,
                   child: Text("Medical History",
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -44,7 +44,7 @@ class _NewHomeState extends State<NewHome> {
                   alignment: Alignment.center,
                   child: Text("Prescription Helper",
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                 ),
@@ -54,7 +54,7 @@ class _NewHomeState extends State<NewHome> {
                   alignment: Alignment.center,
                   child: Text("Prescription Reader",
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.white,
                     ),
                   ),
                 ),

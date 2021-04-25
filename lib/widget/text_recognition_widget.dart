@@ -332,7 +332,13 @@ class _TextRecognitionWidgetState extends State<TextRecognitionWidget> {
             child: ElevatedButton(onPressed: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => Tts(text: text,)));
-            }, child: Text("Read Prescription")),
+            }, child: Text("Read Prescription"),
+              style: ButtonStyle(
+    backgroundColor: MaterialStateProperty.all(Colors.blue[300]),
+//          padding: MaterialStateProperty.all(EdgeInsets.all(50)),
+//          textStyle: MaterialStateProperty.all(TextStyle(fontSize: 30))
+    ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
@@ -340,14 +346,27 @@ class _TextRecognitionWidgetState extends State<TextRecognitionWidget> {
               scanImpText();
 //              Navigator.push(context,
 //                  MaterialPageRoute(builder: (context) => Tts(text: text,)));
-            }, child: Text("Scan Important details from Image")),
+            },
+                child: Text("Scan Important details from Image"),
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.blue[300]),
+//          padding: MaterialStateProperty.all(EdgeInsets.all(50)),
+//          textStyle: MaterialStateProperty.all(TextStyle(fontSize: 30))
+            ),
+            ),
           ),
 
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: ElevatedButton(onPressed: () {
 
-            }, child: Text("Set Reminder")),
+            }, child: Text("Set Reminder"),
+              style: ButtonStyle(
+                backgroundColor: MaterialStateProperty.all(Colors.blue[300]),
+//          padding: MaterialStateProperty.all(EdgeInsets.all(50)),
+//          textStyle: MaterialStateProperty.all(TextStyle(fontSize: 30))
+              ),
+            ),
           )
         ],
       ),
